@@ -50,7 +50,9 @@ class Events
    public static function onMessage($client_id, $message)
    {
         // 向所有人发送 
-        Gateway::sendToAll("$client_id said $message");
+        Gateway::sendToAll("$message");
+        sleep(7);
+        Gateway::sendToAll("$message");
    }
    
    /**
